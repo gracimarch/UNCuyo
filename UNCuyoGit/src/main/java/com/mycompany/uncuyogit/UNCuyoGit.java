@@ -11,10 +11,13 @@ import java.util.ArrayList;
  *
  * @author graci
  */
-public class UNCuyo {
+public class UNCuyoGit {
 
     public static void main(String[] args) {
-        System.out.print("Hello ");
-        System.out.println("word");
+        Alumno a1 = new Alumno("47372498", "Cristian", "Fernandez", "15136", 2025);
+    
+        a1.MostrarDatos();
     }
+    
+    
 }

@@ -45,4 +45,25 @@ public class Socio extends Persona {
     public void setLibrosNoDevueltos(int LibrosNoDevueltos) {
         this.LibrosNoDevueltos = LibrosNoDevueltos;
     }
+    
+    public Socio(String dni, String nombre, String apellido, String email, String telefono, Boolean debelibro, int librosnodevueltos){
+        super(dni, nombre, apellido);
+        this.Email = email;
+        this.Telefono = telefono;
+        this.DebeLibro = debelibro;
+        this.LibrosNoDevueltos = librosnodevueltos;
+        
+    }
+    
+    /* polimorfismo */
+    @Override
+    public void MostrarDatos(){
+        super.MostrarDatos();
+        System.out.println("Email: " + Email + "\rTeléfono: " + Telefono);
+        if (DebeLibro == true){
+            System.out.println("Debe " + LibrosNoDevueltos + " libros");
+        } else {
+            System.out.println("No debe libros");
+        }
+    }
 }

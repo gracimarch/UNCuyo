@@ -8,7 +8,7 @@ package com.mycompany.uncuyogit;
  *
  * @author graci
  */
-public class NoDocente {
+public class NoDocente extends Personal{
     private String Puesto;
 
     public String getPuesto() {
@@ -17,5 +17,18 @@ public class NoDocente {
 
     public void setPuesto(String Puesto) {
         this.Puesto = Puesto;
+    }
+    
+    public NoDocente(String dni, String nombre, String apellido, float sueldo, String puesto){
+        super(dni, nombre, apellido, sueldo);
+        this.Puesto = puesto;
+        
+    }
+    
+    /* polimorfismo */
+    @Override
+    public void MostrarDatos(){
+        super.MostrarDatos();
+        System.out.println("Puesto: " + Puesto);
     }
 }

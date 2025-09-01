@@ -12,9 +12,9 @@ import java.util.ArrayList;
  */
 public class Alumno extends Persona {
 
-    private String Legajo;
-    private int AnioIngreso;
-    private ArrayList<Materia> MateriasInscriptas = new ArrayList<>();
+    public String Legajo;
+    public int AnioIngreso;
+    public ArrayList<Materia> MateriasInscriptas = new ArrayList<>();
 
     public String getLegajo() {
         return Legajo;
@@ -31,7 +31,21 @@ public class Alumno extends Persona {
     public void setAnioIngreso(int AnioIngreso) {
         this.AnioIngreso = AnioIngreso;
     }
-
+    
+    /* super usado para clases con herencia */
+    public Alumno(String dni, String nombre, String apellido, String legajo, int anioingreso){
+        super(dni, nombre, apellido);
+        this.Legajo = legajo;
+        this.AnioIngreso = anioingreso;
+    }
+    
+    /* polimorfismo */
+    @Override
+    public void MostrarDatos(){
+        super.MostrarDatos();
+        System.out.println("Legajo: " + Legajo + "\rAño de ingreso: " + AnioIngreso);
+    }
+    
     public void InscribirseMateria(int IdMateria, ArrayList<Materia> ListaMaterias) {
         for (Materia m : ListaMaterias) {
             if (m.getIdMateria() == IdMateria) {

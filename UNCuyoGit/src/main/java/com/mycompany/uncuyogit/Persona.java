@@ -9,10 +9,10 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Persona {
-    private String DNI;
-    private String Nombre;
-    private String Apellido;
-    private String FechaNacimiento;
+    public String DNI;
+    public String Nombre;
+    public String Apellido;
+    public String FechaNacimiento;
 
     public String getDNI() {
         return DNI;
@@ -46,4 +46,21 @@ public class Persona {
         this.FechaNacimiento = FechaNacimiento;
     }
     
+    public Persona(String dni, String nombre, String apellido, String fechanacimiento){
+        this.DNI = dni;
+        this.Nombre = nombre;
+        this.Apellido = apellido;
+        this.FechaNacimiento = fechanacimiento;
+    }
+    
+    /*sobrecarga*/
+    public Persona(String dni, String nombre, String apellido){
+        this.DNI = dni;
+        this.Nombre = nombre;
+        this.Apellido = apellido;
+    }
+    
+    public void MostrarDatos(){
+        System.out.println("\rDNI: " + DNI + "\rNombre y apellido: " + Nombre + " " + Apellido);
+    }
 }

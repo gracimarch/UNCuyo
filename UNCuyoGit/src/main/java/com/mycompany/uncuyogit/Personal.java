@@ -18,4 +18,16 @@ public class Personal extends Persona {
     public void setSueldo(float Sueldo) {
         this.Sueldo = Sueldo;
     }
+    
+    public Personal(String dni, String nombre, String apellido, float sueldo){
+        super(dni, nombre, apellido);
+        this.Sueldo = sueldo;
+    }
+    
+    /* polimorfismo */
+    @Override
+    public void MostrarDatos(){
+        super.MostrarDatos();
+        System.out.println("Sueldo: " + Sueldo);
+    }
 }

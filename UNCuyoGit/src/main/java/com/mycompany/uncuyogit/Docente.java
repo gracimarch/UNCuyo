@@ -9,5 +9,26 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Docente extends Personal {
+    private String Titulo;    
+
+    public String getTitulo() {
+        return Titulo;
+    }
+
+    public void setTitulo(String Titulo) {
+        this.Titulo = Titulo;
+    }
     
+    public Docente(String dni, String nombre, String apellido, float sueldo, String titulo){
+        super(dni, nombre, apellido, sueldo);
+        this.Titulo = titulo;
+        
+    }
+    
+    /* polimorfismo */
+    @Override
+    public void MostrarDatos(){
+        super.MostrarDatos();
+        System.out.println("Título: " + Titulo);
+    }
 }
