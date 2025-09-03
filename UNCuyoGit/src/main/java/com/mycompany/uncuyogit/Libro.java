@@ -9,10 +9,10 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Libro {
-    private int IdLibro;
-    private String Titulo;
-    private String Autor;
-    private Boolean Disponible;
+    public int IdLibro;
+    public String Titulo;
+    public String Autor;
+    public Boolean Disponible;
 
     public int getIdLibro() {
         return IdLibro;
@@ -44,5 +44,12 @@ public class Libro {
 
     public void setDisponible(Boolean Disponible) {
         this.Disponible = Disponible;
+    }
+
+    public Libro(int idlibro, String titulo, String autor, Boolean disponible) {
+        this.IdLibro = idlibro;
+        this.Titulo = titulo;
+        this.Autor = autor;
+        this.Disponible = disponible;
     }
 }

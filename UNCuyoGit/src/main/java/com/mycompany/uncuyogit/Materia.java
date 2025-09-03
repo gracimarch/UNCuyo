@@ -12,12 +12,11 @@ import java.util.Iterator;
  * @author graci
  */
 public class Materia {
-
-    private int IdMateria;
-    private String Nombre;
-    private int Duracion;
-    private Boolean Promocionable;
-    private static ArrayList<Materia> ListaMaterias = new ArrayList<>();
+    public int IdMateria;
+    public String Nombre;
+    public int Duracion;
+    public Boolean Promocionable;
+    public static ArrayList<Materia> ListaMaterias = new ArrayList<>();
 
     public int getIdMateria() {
         return IdMateria;

@@ -9,13 +9,17 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Facultad {
-    private String Nombre;
+    public String Nombre;
 
     public String getNombre() {
         return Nombre;
     }
 
     public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public Facultad(String Nombre) {
         this.Nombre = Nombre;
     }
 }

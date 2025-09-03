@@ -15,8 +15,9 @@ public class UNCuyoGit {
 
     public static void main(String[] args) {
         Alumno a1 = new Alumno("47372498", "Cristian", "Fernandez", "15136", 2025);
-    
+        Alumno a2 = new Alumno("47875212", "Graciana", "March", "15168", 2025);
         a1.MostrarDatos();
+        a2.MostrarDatos();
     }
     
     

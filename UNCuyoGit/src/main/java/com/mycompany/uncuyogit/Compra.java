@@ -9,10 +9,10 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Compra {
-    private int IdCompra;
-    private String Fecha;
-    private float Monto;
-    private String MetodoPago;
+    public int IdCompra;
+    public String Fecha;
+    public float Monto;
+    public String MetodoPago;
 
     public int getIdCompra() {
         return IdCompra;
@@ -44,5 +44,12 @@ public class Compra {
 
     public void setMetodoPago(String MetodoPago) {
         this.MetodoPago = MetodoPago;
+    }
+
+    public Compra(int idcompra, String fecha, float monto, String metodopago) {
+        this.IdCompra = idcompra;
+        this.Fecha = fecha;
+        this.Monto = monto;
+        this.MetodoPago = metodopago;
     }
 }

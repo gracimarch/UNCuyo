@@ -9,7 +9,7 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Docente extends Personal {
-    private String Titulo;    
+    public String Titulo;    
 
     public String getTitulo() {
         return Titulo;

@@ -9,9 +9,9 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Carrera {
-    private String Nombre;
-    private int Duracion;
-    private int CantidadMaterias;
+    public String Nombre;
+    public int Duracion;
+    public int CantidadMaterias;
 
     public String getNombre() {
         return Nombre;
@@ -35,5 +35,11 @@ public class Carrera {
 
     public void setCantidadMaterias(int CantidadMaterias) {
         this.CantidadMaterias = CantidadMaterias;
+    }
+
+    public Carrera(String nombre, int duracion, int cantidadmaterias) {
+        this.Nombre = nombre;
+        this.Duracion = duracion;
+        this.CantidadMaterias = cantidadmaterias;
     }
 }
