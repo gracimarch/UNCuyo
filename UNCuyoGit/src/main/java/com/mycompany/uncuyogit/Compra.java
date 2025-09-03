@@ -52,4 +52,8 @@ public class Compra {
         this.Monto = monto;
         this.MetodoPago = metodopago;
     }
+    
+    public void GenerarTicket(){
+        System.out.println("ID compra: " + IdCompra + "\rFecha: " + Fecha + "\rMonto a pagar: " + Monto + "\rMétodo de pago: " + MetodoPago);
+    }
 }

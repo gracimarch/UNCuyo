@@ -18,7 +18,15 @@ public class UNCuyoGit {
         Alumno a2 = new Alumno("47875212", "Graciana", "March", "15168", 2025);
         a1.MostrarDatos();
         a2.MostrarDatos();
+        
+        Comedor comedor = new Comedor();
+
+        comedor.agregarPlato(new Menu("Milanesas a la napolitana con arroz", 2800));
+        comedor.agregarPlato(new Menu("Pastel de papa", 3000));
+        comedor.agregarPlato(new Menu("Ravioles con tuco", 2500));
+        comedor.agregarPlato(new Menu("Tarta de zapallito", 2000));
+        comedor.agregarPlato(new Menu("Pollo a la portuguesa", 2800));
+
+        comedor.MostrarMenu();
     }
-    
-    
 }

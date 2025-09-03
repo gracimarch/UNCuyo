@@ -33,5 +33,7 @@ public class Menu {
         this.Precio = precio;
     }
     
-    
+    public void MostrarDatos(){
+        System.out.println(Plato + " | $" + Precio);
+    }
 }
