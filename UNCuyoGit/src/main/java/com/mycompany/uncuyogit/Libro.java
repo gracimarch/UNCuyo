@@ -4,6 +4,9 @@
  */
 package com.mycompany.uncuyogit;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  *
  * @author graci
@@ -13,6 +16,7 @@ public class Libro {
     public String Titulo;
     public String Autor;
     public Boolean Disponible;
+    public static ArrayList<Libro> ListaLibros = new ArrayList<>();
 
     public int getIdLibro() {
         return IdLibro;
@@ -51,5 +55,20 @@ public class Libro {
         this.Titulo = titulo;
         this.Autor = autor;
         this.Disponible = disponible;
+        ListaLibros.add(this);
+    }
+    
+    public static void MostrarLibros() {
+        System.out.println("\rLibros:");
+        Iterator<Libro> itrListaLibros = ListaLibros.iterator();
+        while (itrListaLibros.hasNext()) {
+            Libro ListaLibros = itrListaLibros.next();
+            System.out.print("IdLibro: " + ListaLibros.getIdLibro() + " | Título: " + ListaLibros.getTitulo() + " | Autor: " + ListaLibros.getAutor());
+            if (ListaLibros.getDisponible() == true) {
+                System.out.println(" | Disponible");
+            } else {
+                System.out.println(" | No disponible");
+            }
+        }
     }
 }

@@ -5,6 +5,7 @@
 package com.mycompany.uncuyogit;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -14,6 +15,8 @@ public class Alumno extends Persona {
     public String Legajo;
     public int AnioIngreso;
     public ArrayList<Materia> MateriasInscriptas = new ArrayList<>();
+    public static ArrayList<Alumno> ListaAlumnos = new ArrayList<>();
+    public HashMap<Materia, Float> Notas = new HashMap<>();
 
     public String getLegajo() {
         return Legajo;
@@ -36,6 +39,7 @@ public class Alumno extends Persona {
         super(dni, nombre, apellido);
         this.Legajo = legajo;
         this.AnioIngreso = anioingreso;
+        ListaAlumnos.add(this);
     }
 
     /* polimorfismo */
@@ -56,14 +60,25 @@ public class Alumno extends Persona {
         System.out.println("Materia con ID " + IdMateria + " no encontrada.");
     }
 
-    public void MostrarMateriasInscritas() {
+    public void MostrarMateriasInscriptas() {
         if (MateriasInscriptas.isEmpty()) {
-            System.out.println("El alumno no está inscripto en ninguna materia.");
+            System.out.println("\rEl alumno no está inscripto en ninguna materia.");
         } else {
-            System.out.println("Materias inscriptas de " + getNombre() + ":");
+            System.out.println("\rMaterias inscriptas de " + getNombre() + ":");
             for (Materia m : MateriasInscriptas) {
                 System.out.println("- " + m.getNombre());
             }
+        }
+    }
+    
+    public void AgregarNota(Materia materia, float nota){
+        Notas.put(materia, nota);
+    }
+    
+    public void MostrarNotas(){
+        System.out.println("\rNotas de " + Nombre + " " + Apellido + ":");
+        for (Materia m : Notas.keySet()){
+            System.out.println(m.getNombre() + ":" + Notas.get(m));
         }
     }
 }

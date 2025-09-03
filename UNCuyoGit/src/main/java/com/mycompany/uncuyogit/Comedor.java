@@ -16,15 +16,21 @@ public class Comedor {
     public Comedor() {
     }
     
-    public void agregarPlato(Menu m) {
+    public void AgregarPlato(Menu m) {
         ListaMenus.add(m);
     }
     
     public void MostrarMenu() {
-        System.out.println("Menú");
+        System.out.println("\rMenú");
         for (Menu m : ListaMenus) {
-            m.MostrarDatos();
+            m.MostrarPlato();
         }
+    }
+    
+    public void RegistrarCompra(String dni, int idcompra, String fecha, float monto, String metodopago){
+        System.out.println("\rCompra de " + dni + " registrada");
+        Compra compra = new Compra(idcompra, fecha, monto, metodopago);
+        compra.GenerarTicket();
     }
     
     /* dejo esto por las dudas :)

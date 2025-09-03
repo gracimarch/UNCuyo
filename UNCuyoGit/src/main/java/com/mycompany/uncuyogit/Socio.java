@@ -9,10 +9,10 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Socio extends Persona {
-    private Boolean DebeLibro;
+    public Boolean DebeLibro;
     private String Email;
     private String Telefono;
-    private int LibrosNoDevueltos;
+    public int LibrosNoDevueltos;
 
     public Boolean getDebeLibro() {
         return DebeLibro;
@@ -46,13 +46,16 @@ public class Socio extends Persona {
         this.LibrosNoDevueltos = LibrosNoDevueltos;
     }
     
-    public Socio(String dni, String nombre, String apellido, String email, String telefono, Boolean debelibro, int librosnodevueltos){
+    public Socio(String dni, String nombre, String apellido, String email, String telefono, int librosnodevueltos){
         super(dni, nombre, apellido);
         this.Email = email;
         this.Telefono = telefono;
-        this.DebeLibro = debelibro;
         this.LibrosNoDevueltos = librosnodevueltos;
-        
+        if (librosnodevueltos > 0){
+            this.DebeLibro = true;
+        } else{
+            this.DebeLibro = false;
+        }
     }
     
     /* polimorfismo */
@@ -64,6 +67,22 @@ public class Socio extends Persona {
             System.out.println("Debe " + LibrosNoDevueltos + " libros");
         } else {
             System.out.println("No debe libros");
+        }
+    }
+    
+    public void SoliticarLibro(int idlibro, Biblioteca biblioteca){
+        boolean PrestamoExitoso = biblioteca.PrestarLibro(idlibro, Nombre);
+        if (PrestamoExitoso == true){
+            this.LibrosNoDevueltos++;
+            this.DebeLibro = true;
+        }
+    }
+    
+    public void DevolverLibro(int idlibro, Biblioteca biblioteca){
+        boolean DevolucionExitosa = biblioteca.RecibirLibro(idlibro, Nombre);
+        if (DevolucionExitosa == true){
+            this.LibrosNoDevueltos--;
+            this.DebeLibro = false;
         }
     }
 }
