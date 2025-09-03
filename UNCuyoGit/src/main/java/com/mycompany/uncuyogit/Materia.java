@@ -58,8 +58,8 @@ public class Materia {
         ListaMaterias.add(this);
     }
 
-    public void MostrarMaterias() {
-        System.out.println("Materias:");
+    public static void MostrarMaterias() {
+        System.out.println("\rMaterias:");
         Iterator<Materia> itrListaMaterias = ListaMaterias.iterator();
         while (itrListaMaterias.hasNext()) {
             Materia ListaMaterias = itrListaMaterias.next();
