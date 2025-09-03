@@ -27,7 +27,7 @@ public class Comedor {
         }
     }
     
-    /* dejo esto por las dudas :)
+    /* dejo esto por las dudas :))
     public void MostrarMenu() {
         System.out.println("Menú\r1. Milanesas a la napolitana con arroz\r2. Pastel de papa\r3. Ravioles con tuco\r4. Tarta de zapallito\r5. Pollo a la portuguesa");
     }*/
