@@ -9,7 +9,7 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Biblioteca {
-    public Biblioteca(){
+    Biblioteca(){
     }
     
     public void BuscarLibro(int idlibro){

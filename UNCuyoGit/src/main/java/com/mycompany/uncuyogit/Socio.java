@@ -9,10 +9,10 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Socio extends Persona {
-    public Boolean DebeLibro;
+    private Boolean DebeLibro;
     private String Email;
     private String Telefono;
-    public int LibrosNoDevueltos;
+    private int LibrosNoDevueltos;
 
     public Boolean getDebeLibro() {
         return DebeLibro;

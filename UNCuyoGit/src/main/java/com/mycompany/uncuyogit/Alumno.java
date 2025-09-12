@@ -12,11 +12,11 @@ import java.util.HashMap;
  * @author graci
  */
 public class Alumno extends Persona {
-    public String Legajo;
-    public int AnioIngreso;
-    public ArrayList<Materia> MateriasInscriptas = new ArrayList<>();
-    public static ArrayList<Alumno> ListaAlumnos = new ArrayList<>();
-    public HashMap<Materia, Float> Notas = new HashMap<>();
+    private String Legajo;
+    private int AnioIngreso;
+    private ArrayList<Materia> MateriasInscriptas = new ArrayList<>();
+    static ArrayList<Alumno> ListaAlumnos = new ArrayList<>();
+    private HashMap<Materia, Float> Notas = new HashMap<>();
 
     public String getLegajo() {
         return Legajo;

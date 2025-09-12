@@ -9,10 +9,10 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Compra {
-    public int IdCompra;
-    public String Fecha;
-    public float Monto;
-    public String MetodoPago;
+    private int IdCompra;
+    private String Fecha;
+    private float Monto;
+    private String MetodoPago;
 
     public int getIdCompra() {
         return IdCompra;

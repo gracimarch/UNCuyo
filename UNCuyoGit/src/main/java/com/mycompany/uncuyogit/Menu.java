@@ -9,8 +9,8 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Menu {
-    public String Plato;
-    public float Precio;
+    private String Plato;
+    private float Precio;
 
     public String getPlato() {
         return Plato;

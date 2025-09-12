@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author graci
  */
 public class Docente extends Personal {
-    public String Titulo;    
+    private String Titulo;    
 
     public String getTitulo() {
         return Titulo;

@@ -12,11 +12,11 @@ import java.util.Iterator;
  * @author graci
  */
 public class Libro {
-    public int IdLibro;
-    public String Titulo;
-    public String Autor;
-    public Boolean Disponible;
-    public static ArrayList<Libro> ListaLibros = new ArrayList<>();
+    private int IdLibro;
+    private String Titulo;
+    private String Autor;
+    private Boolean Disponible;
+    static ArrayList<Libro> ListaLibros = new ArrayList<>();
 
     public int getIdLibro() {
         return IdLibro;

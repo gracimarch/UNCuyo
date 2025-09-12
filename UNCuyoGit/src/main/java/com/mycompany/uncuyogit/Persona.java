@@ -9,10 +9,10 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Persona {
-    public String DNI;
-    public String Nombre;
-    public String Apellido;
-    public String FechaNacimiento;
+    private String DNI;
+    String Nombre;
+    String Apellido;
+    private String FechaNacimiento;
 
     public String getDNI() {
         return DNI;

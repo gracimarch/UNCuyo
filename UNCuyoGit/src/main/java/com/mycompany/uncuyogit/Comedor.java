@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author graci
  */
 public class Comedor {
-    public static ArrayList<Menu> ListaMenus = new ArrayList<>();
+    private static ArrayList<Menu> ListaMenus = new ArrayList<>();
 
     public Comedor() {
     }

@@ -9,9 +9,9 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Carrera {
-    public String Nombre;
-    public int Duracion;
-    public int CantidadMaterias;
+    private String Nombre;
+    private int Duracion;
+    private int CantidadMaterias;
 
     public String getNombre() {
         return Nombre;

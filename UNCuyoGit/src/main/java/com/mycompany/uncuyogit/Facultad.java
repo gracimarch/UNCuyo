@@ -9,7 +9,7 @@ package com.mycompany.uncuyogit;
  * @author graci
  */
 public class Facultad {
-    public String Nombre;
+    private String Nombre;
 
     public String getNombre() {
         return Nombre;
